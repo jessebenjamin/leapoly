@@ -26,7 +26,7 @@ $(document).ready(function (){
         $(img).wrap("<a></a>").parent().attr("href", src).attr("alt", "Leapolized you!").attr("target", "_blank").wrap("<div class='vvvv_img'></div>").parent().appendTo( "#container" );
       }
 
-      var image = document.getElementById('.vvvv_img img');
+      var image = $('.vvvv_img img');
 
       $(image).onerror = function () {
         $(this).css("display", "none");
