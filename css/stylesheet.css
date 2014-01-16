@@ -40,14 +40,12 @@ html, body {
 
 .vvvv_img img {
 	vertical-align: middle;
-	min-width: 100%;
-	min-height: 100%;
+	max-width: 100%;
+	max-height: 100%;
 }
 
 .vvvv_img a {
-	vertical-align: middle;
-	min-width: 100%;
-	min-height: 100%;
+
 }
 
 #footer {

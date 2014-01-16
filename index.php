@@ -7,6 +7,11 @@
   	<meta name="author" content="Josua Stasser">
   	<meta name="description" content="A generative photobooth.">
   	<link rel="stylesheet" href="./css/stylesheet.css" type="text/css"> 
+    <script>
+      function imgError(image) {
+        $(this).parent().hide();
+      }
+    </script>
 </head>
 
 <body>
