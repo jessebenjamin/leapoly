@@ -4,15 +4,22 @@ $(document).ready(function (){
 
       var img;
       var src;
+      var path;
+      var date;
       var maxImages = 100;
+      var button; 
 
       for (var i = 1; i < maxImages; i++) {
 
-        src = "./images/leapoly" + i + ".png";
+        date = new Date();
+        path = "http://leapoly.jesse-benjamin.com/images/leapoly" + i + ".png";
+        src = path + "?" + date;
         img = new Image();
         img.src = src;
+        button = "<a href='http://www.facebook.com/sharer.php?s=100&p[url]=http://leapoly.jesse-benjamin.com/&p[images][0]=" + path + "&p[title]=I Leapolized Myself.&p[summary]=Find this and other versions at leapoly — the generative photobooth' target='_blank'>•</a>";
 
-        $(img).attr("onerror", "imgError(this);").wrap("<a></a>").parent().attr("href", src).attr("title", "Leapolized you!").attr("target", "_blank").wrap("<div class='vvvv_img'></div>").parent().prependTo( "#container" );
+        $(img).attr("onerror", "imgError(this);").wrap("<a></a>").parent().attr("href", src).attr("title", "Leapolized you!").attr("target", "_blank").wrap("<div class='vvvv_img'></div>").parent().append(button).prependTo( "#container" );
+
 
       }
 
@@ -35,5 +42,5 @@ $(document).ready(function (){
 
     setTimeout(function () {
       location.reload();
-    }, 60000);
+    }, 90000);
 });
